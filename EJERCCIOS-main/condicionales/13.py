@@ -2,6 +2,7 @@ import os
 os.system("cls")
 
 def son_consecutivas(numero):
+    
     # Convertir el número a una lista de dígitos
     cifras = [int(d) for d in str(numero)]
     
@@ -20,7 +21,7 @@ def son_consecutivas(numero):
     else:
         return "El número no tiene exactamente tres cifras."
 
-# Ejemplo 
+# Ejemplo
 numero = 321  
 
 resultado = son_consecutivas(numero)
