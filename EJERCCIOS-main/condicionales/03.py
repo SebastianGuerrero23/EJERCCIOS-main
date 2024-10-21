@@ -1,27 +1,26 @@
 import os
 os.system("cls")
 
-# Clasificación del ángulo
-if angulo == 0:
-    print ("El ángulo es nulo.")
+def clasificar_angulo(grados):
+    if grados == 0:
+        return "Nulo"
+    elif 0 < grados < 90:
+        return "Agudo"
+    elif grados == 90:
+        return "Recto"
+    elif 90 < grados < 180:
+        return "Obtuso"
+    elif grados == 180:
+        return "Llano"
+    elif 180 < grados < 360:
+        return "Cóncavo"
+    elif grados == 360:
+        return "Completo"
+    else:
+        return "Ángulo no válido"
 
-elif 0 < angulo < 90:
-    print ("El ángulo es agudo.")
+# Ejemplo 
+angulo = 120  #Cambia el valor segun que angulo sea
 
-elif angulo == 90:
-    print ("El ángulo es recto.")
-
-elif 90 < angulo < 180:
-    print ("El ángulo es obtuso.")
-
-elif angulo == 180:
-    print( "El ángulo es llano.")
-
-elif 180 < angulo < 360:
-    print ("El ángulo es cóncavo.")
-
-elif angulo == 360:
-    print ("El ángulo es completo.")
-
-else:
-    print ("El ángulo no está en el rango válido (0° a 360°).")
+clasificacion = clasificar_angulo(angulo)
+print(f"El ángulo es: {clasificacion}")
